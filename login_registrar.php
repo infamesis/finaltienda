@@ -1,5 +1,6 @@
 <?php
-
+echo "Guten Morgen Fabi"
+/*
 include("conexion.php");
 
 $nombre = $_POST["usuario"];
@@ -36,5 +37,5 @@ if(isset($_POST["btnregistrar"]))
 	}
 }
 
-
+*/
 ?>
