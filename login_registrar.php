@@ -1,6 +1,5 @@
 <?php
-echo phpinfo();
-/*
+
 include("conexion.php");
 
 $nombre = $_POST["usuario"];
@@ -37,5 +36,4 @@ if(isset($_POST["btnregistrar"]))
 	}
 }
 
-*/
 ?>
