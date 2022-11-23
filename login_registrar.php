@@ -1,5 +1,5 @@
 <?php
-echo "Guten Morgen Fabi"
+echo phpinfo();
 /*
 include("conexion.php");
 
