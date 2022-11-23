@@ -1,5 +1,5 @@
 <?php
-echo phpinfo();
+phpinfo();
 /*
 include("conexion.php");
 
