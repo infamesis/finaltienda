@@ -15,10 +15,10 @@ if(isset($_POST["btningresar"]))
 	
 	if($nr==1)
 	{
-		echo "<script> alert('Bienvenido $nombre'); window.location='principal.php' </script>";
+		echo "<script> alert('Bienvenido $nombre'); window.location='/../principal.php' </script>";
 	}else
 	{
-		echo "<script> alert('Usuario no existe'); window.location='index.html' </script>";
+		echo "<script> alert('Usuario no existe'); window.location='/../index.html' </script>";
 	}
 }
 
