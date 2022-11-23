@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Verificacion</title>
+  <link rel="stylesheet" href="css/verificacion.css">
+  <script type="text/javascript"
+  src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script type="text/javascript">
+  emailjs.init('diXOK0vOgWzo_hE1q')
+</script>
+  <center>
+
+    <h1>CARCASAS "INFAMESIS"</h1>
+    <h1>Verifica tus datos para confirmar el pedido</h1>
+</head>
+
+<form id="form">
+  <div class="field">
+    <label for="to_name">Ingresa tu nombre</label>
+    <input type="text" name="to_name" id="to_name">
+  </div>
+  <div class="field">
+    <label for="from_name">Introduce tu correo electrónico</label>
+    <input type="text" name="from_name" id="from_name">
+  </div>
+  <div class="field">
+    <label for="reply_to">Confirma tu correo electrónico</label>
+    <input type="text" name="reply_to" id="reply_to">
+  </div>
+
+  <input type="submit" id="button" value="Send Email">
+</form>
+
+<a href="javascript:history.back()"> Volver Atrás</a>
+
+
+<script src="correo.js"></script>
+</center>
+
+<script>
+const btn = document.getElementById('button');
+
+document.getElementById('form')
+ .addEventListener('submit', function(event) {
+   event.preventDefault();
+
+   btn.value = 'Sending...';
+
+   const serviceID = 'default_service';
+   const templateID = 'template_k3hfr94';
+
+   emailjs.sendForm(serviceID, templateID, this)
+    .then(() => {
+      btn.value = 'Send Email';
+      alert('Sent!');
+    }, (err) => {
+      btn.value = 'Send Email';
+      alert(JSON.stringify(err));
+    });
+});
+</script>
+
+</body>
+
+</html>
